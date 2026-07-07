@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EV Anatomy — How an Electric Car Works</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles.css" />
+</head>
+<body>
+  <div id="app">
+    <canvas id="scene"></canvas>
+    <div id="css2d"></div>
+
+    <header id="hud-top">
+      <div class="brand">
+        <div class="brand-mark"><span class="bolt">⚡</span></div>
+        <div class="brand-text">
+          <h1>EV&nbsp;ANATOMY</h1>
+          <p>How an electric car works · interactive teardown</p>
+        </div>
+      </div>
+      <nav id="mode-buttons">
+        <button class="mode-btn" id="btn-xray" title="See through the body">
+          <span class="key">X</span>X‑Ray
+        </button>
+        <button class="mode-btn" id="btn-explode" title="Exploded view">
+          <span class="key">E</span>Explode
+        </button>
+        <button class="mode-btn" id="btn-drive" title="Watch energy flow while driving">
+          <span class="key">D</span>Drive
+        </button>
+        <button class="mode-btn ghost" id="btn-reset" title="Reset camera and view">
+          <span class="key">R</span>Reset
+        </button>
+      </nav>
+    </header>
+
+    <div id="hint">
+      <span class="pulse-dot"></span>
+      Click a glowing hotspot — or a part chip below — to pull that component out of the car
+    </div>
+
+    <nav id="chips"></nav>
+
+    <aside id="panel" aria-hidden="true">
+      <button id="panel-close" title="Back to full car">✕</button>
+      <div id="panel-scroll">
+        <p class="panel-kicker" id="panel-kicker"></p>
+        <h2 id="panel-title"></h2>
+        <p class="panel-tagline" id="panel-tagline"></p>
+        <p class="panel-summary" id="panel-summary"></p>
+        <div class="panel-section">
+          <h3>How it works</h3>
+          <ol id="panel-steps"></ol>
+        </div>
+        <div class="panel-section" id="panel-widget-section">
+          <h3 id="panel-widget-title">Try it</h3>
+          <div id="panel-widget"></div>
+        </div>
+        <div class="panel-section">
+          <h3>Spec sheet</h3>
+          <dl id="panel-specs"></dl>
+        </div>
+        <div class="fun-fact" id="panel-funfact"></div>
+        <div class="panel-nav">
+          <button id="panel-prev">← Prev part</button>
+          <button id="panel-next">Next part →</button>
+        </div>
+      </div>
+    </aside>
+
+    <footer id="hud-bottom">
+      <p>Stylized EV inspired by the Tesla Model 3 · educational demo, not affiliated with Tesla · drag to orbit, scroll to zoom</p>
+    </footer>
+
+    <div id="loader">
+      <div class="loader-bolt">⚡</div>
+      <p>WARMING UP THE ELECTRONS…</p>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
