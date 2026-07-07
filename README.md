@@ -1,11 +1,15 @@
 # ⚡ EV Anatomy — How an Electric Car Works
 
+### 🚗 [**Try the live demo →**](https://phoenix0415.github.io/ev-anatomy/)
+
+> **https://phoenix0415.github.io/ev-anatomy/** — no install needed, works in any modern browser (best on desktop).
+
 An interactive 3D teardown of a Tesla Model 3-inspired electric car. Click any glowing
 hotspot (or a part chip) and the component detaches from the car while the camera
 focuses on it, with a plain-language explanation, real spec figures, and a hands-on
 widget for every part.
 
-## Run it
+## Run it locally
 
 ```bash
 npm install
@@ -46,5 +50,7 @@ npm run dev        # → http://localhost:5173
 - **Content pipeline**: each component's copy and spec figures were researched and
   then adversarially fact-checked by a second pass before landing in
   [src/content.js](src/content.js).
+- **Deployment**: every push to `main` auto-builds and redeploys the
+  [live site](https://phoenix0415.github.io/ev-anatomy/) via GitHub Actions → GitHub Pages.
 
 Educational demo. Not affiliated with Tesla.
